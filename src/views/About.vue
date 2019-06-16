@@ -15,5 +15,10 @@ export default {
 </script>
 
 <style lang="scss">
-
+.about {
+  margin-top: 20px;
+  border: 1px solid #898989;
+  padding: 10px;
+  border-radius: 2px;
+}
 </style>

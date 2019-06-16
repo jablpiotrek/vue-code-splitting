@@ -3,6 +3,9 @@
     <h2>
       Bar
     </h2>
+    <p>
+      Bar - also a fatty.
+    </p>
   </div>
 </template>
 
