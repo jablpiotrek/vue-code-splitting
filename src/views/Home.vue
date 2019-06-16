@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="showFoo">
+      Show Foo!
+    </button>
+    <foo v-if="isFooVisible" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+
 
 export default {
   name: 'home',
+  data() {
+    return {
+      isFooVisible: false,
+    };
+  },
   components: {
-    HelloWorld,
+    Foo: () => import(/* webpackChunkName: "Foo" */ '../components/Foo.vue'),
+  },
+  methods: {
+    showFoo() {
+      this.isFooVisible = true;
+    },
   },
 };
 </script>
