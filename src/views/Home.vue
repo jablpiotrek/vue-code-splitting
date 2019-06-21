@@ -8,13 +8,7 @@
 </template>
 
 <script>
-import Loader from '../components/Loader.vue';
-
-const Foo = () => ({
-  component: import(/* webpackChunkName: 'Foo' */'../components/Foo.vue'),
-  loading: Loader,
-  delay: 1,
-});
+import Foo from '../components/Foo.vue';
 
 export default {
   name: 'home',
