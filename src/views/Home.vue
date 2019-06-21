@@ -8,6 +8,13 @@
 </template>
 
 <script>
+import Loader from '../components/Loader.vue';
+
+const Foo = () => ({
+  component: import(/* webpackChunkName: 'Foo' */'../components/Foo.vue'),
+  loading: Loader,
+  delay: 1,
+});
 
 export default {
   name: 'home',
@@ -17,7 +24,7 @@ export default {
     };
   },
   components: {
-    Foo: () => import(/* webpackChunkName: 'Foo' */'../components/Foo.vue'),
+    Foo,
   },
   methods: {
     showFoo() {
